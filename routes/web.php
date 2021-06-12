@@ -38,6 +38,9 @@ Route::get('opcoes/{opcoes?}', function($opcao=null){
     return view('outras.opcoes', compact(['opcao']));
 })->name('opcoes');
 
+Route::get('bootstrap', function(){
+    return view('outras.exemplo');
+});
 /*
 Route::get('/ola/{nome}/{sobrenome}', function($nome, $sobrenome){
     echo "Ola! Seja bem vindo, $nome $sobrenome!";
