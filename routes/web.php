@@ -34,6 +34,10 @@ Route::get('multiplicar/{n1}/{n2}', [MeuControlador::class, 'multiplicar']);
 
 Route::resource('clientes', ClienteControlador::class);
 
+Route::get('opcoes/{opcoes?}', function($opcao=null){
+    return view('outras.opcoes', compact(['opcao']));
+})->name('opcoes');
+
 /*
 Route::get('/ola/{nome}/{sobrenome}', function($nome, $sobrenome){
     echo "Ola! Seja bem vindo, $nome $sobrenome!";
